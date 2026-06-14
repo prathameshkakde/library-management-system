@@ -28,6 +28,12 @@ public class LibraryManagementSystemApplication {
 			bookService.saveBook(book);
 
 			System.out.println("Book saved successfully!");
+
+			System.out.println("Books in database:");
+
+			bookService.getAllBooks()
+					.forEach(savedBook ->
+							System.out.println(savedBook.getTitle()));
 		};
 	}
 }

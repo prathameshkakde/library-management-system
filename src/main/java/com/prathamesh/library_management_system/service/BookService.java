@@ -3,6 +3,7 @@ package com.prathamesh.library_management_system.service;
 import com.prathamesh.library_management_system.repository.BookRepository;
 import com.prathamesh.library_management_system.entity.Book;
 import org.springframework.stereotype.Service;
+import java.util.List;
 
 /**
  * Service class for book-related business logic.
@@ -18,5 +19,9 @@ public class BookService {
 
     public Book saveBook(Book book) {
         return bookRepository.save(book);
+    }
+
+    public List<Book> getAllBooks() {
+        return bookRepository.findAll();
     }
 }
